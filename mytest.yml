@@ -1,0 +1,8 @@
+---
+- hosts: 172.31.0.156
+  become: yes
+  tasks:
+  - name: install httpd
+    ansible.builtin.yum:
+       name: httpd>=2.4
+       state: present
